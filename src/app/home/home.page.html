@@ -1,20 +1,23 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
-  </ion-toolbar>
+<ion-header>
 </ion-header>
-
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
-
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+<ion-content> 
+  <ion-grid fixed>       
+    <img src= "assets/images/Logo.png" class="center">
+    <h1 align="center">Log in Now</h1>
+    <p align="center">Please login to continue using our app</p>
+    <hr>
+    <ion-input id="username" name="username" placeholder="Username"></ion-input>
+    <hr>
+    <ion-item id="passwordField">
+      <ion-input id="password" name="password" placeholder="Password" [type]="showPassword ? 'text' : 'password'"></ion-input>
+      <ion-icon slot="end" [name]="passwordToggleIcon" (click)="togglePassword()"></ion-icon> 
+    </ion-item>
+    <hr>
+    <hr>
+    <ion-button id="loginButton" expand="block" (click)="login()">Login</ion-button>
+    <ion-item id="signupitem">
+      <p id="newaccount">Don't have an account?</p>
+      <p id="signup" (click)="signupButtonFun()">Sign up</p>
+    </ion-item>
+  </ion-grid>
 </ion-content>

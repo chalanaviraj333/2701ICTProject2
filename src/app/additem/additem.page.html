@@ -1,0 +1,27 @@
+<ion-header translucent="true">
+  <ion-toolbar>  
+    <ion-buttons slot="primary">
+      <ion-button (click)="dismiss()">
+        <ion-icon slot="icon-only" name="close"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title id="titleadditem">Add Item</ion-title>          
+  </ion-toolbar>
+</ion-header>
+
+<ion-content fullscreen="true">
+  <ion-input id="productname" placeholder="Product Name" class="css"></ion-input>
+  <hr>
+  <ion-input id="productid" placeholder="Product ID" class="css"></ion-input>
+  <hr>
+  <ion-input id="price" placeholder="Price" class="css"></ion-input>
+  <hr>
+  <ion-input id="quantity" placeholder="Quantity" class="css"></ion-input>
+  <hr>
+  
+  <hr>
+  <ion-textarea rows="6" cols="20" placeholder="Enter any notes here..."></ion-textarea>
+  <hr>
+  <ion-button id="signupButton" expand="block">Signup</ion-button>
+</ion-content>
+
