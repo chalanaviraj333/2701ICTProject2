@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { PopoverController } from '@ionic/angular';
 import { AlertController } from '@ionic/angular';
 import { ActionSheetController } from '@ionic/angular';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-home-popover',
@@ -10,12 +11,17 @@ import { ActionSheetController } from '@ionic/angular';
 })
 export class HomePopoverComponent implements OnInit {
 
-  constructor(public popoverController: PopoverController, private alertController: AlertController, private actionSheet: ActionSheetController) { }
+  constructor(public popoverController: PopoverController, private alertController: AlertController, private actionSheet: ActionSheetController, private router: Router) { }
 
   ngOnInit() {}
 
-  doc(){
-    window.open('https://ionicframework.com/docs/api/popover', '_blank');
+  // doc(){
+  //   window.open('https://ionicframework.com/docs/api/popover', '_blank');
+  //   this.popoverController.dismiss();
+  // }
+
+  editItem(){
+    this.router.navigate(['edititem']);
     this.popoverController.dismiss();
   }
   close(){

@@ -1,9 +1,26 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>edititem</ion-title>
+    <ion-title>Edit Item</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="dismiss()">
+        <ion-icon slot="icon-only" name="close"></ion-icon>
+      </ion-button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-
+  <ion-input id="productname" placeholder="Product Name" class="css"></ion-input>
+  <hr>
+  <ion-input id="productid" placeholder="Product ID" class="css"></ion-input>
+  <hr>
+  <ion-input id="price" placeholder="Price" class="css"></ion-input>
+  <hr>
+  <ion-input id="quantity" placeholder="Quantity" class="css"></ion-input>
+  <hr>
+  
+  <hr>
+  <ion-textarea rows="6" cols="20" placeholder="Enter any notes here..."></ion-textarea>
+  <hr>
+  <ion-button id="signupButton" expand="block" (click)="itemPage()">Done</ion-button>
 </ion-content>
