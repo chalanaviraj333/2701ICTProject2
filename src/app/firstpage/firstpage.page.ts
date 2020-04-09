@@ -10,9 +10,15 @@ import { AdditemPage } from '../additem/additem.page';
 })
 export class FirstpagePage implements OnInit {
 
-  constructor(public modalController: ModalController) {
+  constructor(public modalController: ModalController, private router: Router) {
 
    }
+
+   itemPage() {
+    this.router.navigate(['itempage']);
+  }
+
+  
 
 
    async presentModal(){

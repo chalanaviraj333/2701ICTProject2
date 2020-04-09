@@ -1,0 +1,27 @@
+#titleitempage{
+    text-align: center;
+}
+
+#itemimage{
+    max-width: 300px;
+    max-height: 300px;
+    border: 2px solid black;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.center{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px;
+}
+
+.listclass{
+    font-size: 14px;
+}
+
+#listheader{
+    font-size: 16px;
+    font-weight: bold;
+}

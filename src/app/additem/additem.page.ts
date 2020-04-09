@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {ModalController} from '@ionic/angular';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-additem',
@@ -8,7 +9,7 @@ import {ModalController} from '@ionic/angular';
 })
 export class AdditemPage implements OnInit {
 
-  constructor(public modalController: ModalController) { }
+  constructor(public modalController: ModalController, private router: Router) { }
 
   ngOnInit() {
   }
@@ -16,6 +17,10 @@ export class AdditemPage implements OnInit {
 
   dismiss(){
     this.modalController.dismiss();
+  }
+
+  itemPage() {
+    this.router.navigate(['itempage']);
   }
 
 }

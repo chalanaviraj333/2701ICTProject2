@@ -17,6 +17,10 @@ const routes: Routes = [
     path: 'additem',
     loadChildren: () => import('./additem/additem.module').then( m => m.AdditemPageModule)
   },
+  {
+    path: 'itempage',
+    loadChildren: () => import('./itempage/itempage.module').then( m => m.ItempagePageModule)
+  },
 ];
 
 @NgModule({

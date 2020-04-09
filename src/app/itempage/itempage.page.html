@@ -1,0 +1,38 @@
+<ion-header translucent="true">
+  <ion-toolbar>  
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title id="titleitempage">Carbine Knob Set</ion-title>  
+    <ion-buttons slot="end">
+      <ion-button (click)="dismiss()">
+        <ion-icon slot="icon-only" name="ellipsis-vertical-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>        
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-img id="itemimage" src="assets/images/lock1.jpg" class="center"></ion-img>
+  <hr>
+  <ion-list-header lines="inset">
+    <ion-label id="listheader">Item Details</ion-label>
+  </ion-list-header>
+
+  <ion-list>
+    <ion-item>
+      <ion-label class="listclass">Product ID KD3421</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-label class="listclass">Price $34.90</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-label class="listclass">Quantity 65</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-label class="listclass">Notes Compitable with most fire doors.</ion-label>
+    </ion-item>
+  </ion-list>
+
+
+</ion-content>
