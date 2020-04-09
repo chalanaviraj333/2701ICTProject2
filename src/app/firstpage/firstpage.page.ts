@@ -18,6 +18,10 @@ export class FirstpagePage implements OnInit {
     this.router.navigate(['itempage']);
   }
 
+  chartPage(){
+    this.router.navigate(['chartpage']);
+  }
+
   
 
 

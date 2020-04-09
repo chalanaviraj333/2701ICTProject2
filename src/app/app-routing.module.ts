@@ -25,6 +25,10 @@ const routes: Routes = [
     path: 'edititem',
     loadChildren: () => import('./edititem/edititem.module').then( m => m.EdititemPageModule)
   },
+  {
+    path: 'chartpage',
+    loadChildren: () => import('./chartpage/chartpage.module').then( m => m.ChartpagePageModule)
+  },
 ];
 
 @NgModule({
