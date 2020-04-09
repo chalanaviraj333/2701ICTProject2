@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { PopoverController } from '@ionic/angular';
+import { AlertController } from '@ionic/angular';
+import { ActionSheetController } from '@ionic/angular';
 
 @Component({
   selector: 'app-home-popover',
@@ -8,7 +10,7 @@ import { PopoverController } from '@ionic/angular';
 })
 export class HomePopoverComponent implements OnInit {
 
-  constructor(public popoverController: PopoverController) { }
+  constructor(public popoverController: PopoverController, private alertController: AlertController, private actionSheet: ActionSheetController) { }
 
   ngOnInit() {}
 
@@ -18,6 +20,31 @@ export class HomePopoverComponent implements OnInit {
   }
   close(){
     this.popoverController.dismiss();
+  }
+
+  async presentAlert() {
+    const alert = await this.alertController.create({
+      header: 'Alert',
+      message: 'are you sure want to delete this item?',
+      buttons: [{
+        text: 'Cancel',
+        role: 'cancel',
+        handler: () => {
+          console.log('you clicked me');
+        }
+      },
+        {
+          text: 'Okay',
+          cssClass: 'secondary',
+          handler: () => {
+            console.log('Second Hanlder');
+          }
+        }
+
+      ]
+    });
+
+    await alert.present();
   }
 
 }
